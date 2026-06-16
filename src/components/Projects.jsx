@@ -10,7 +10,7 @@ function Projects() {
       description: "Una piattaforma dinamica progettata per permettere ai calciatori emergenti di caricare i propri dati, statistiche e video-evidenze. Il sistema include un'architettura backend robusta per la gestione dei profili e integra servizi cloud per l'ottimizzazione e lo streaming dei contenuti multimediali.",
       tech: ["React", "Node.js", "Express", "MongoDB", "Cloudinary", "Bootstrap"],
       githubLink: "https://github.com/GT8681/capstone-Project", 
-      liveLink: "capstone-project-git-main-gt8681s-projects.vercel.app",
+      liveLink: "https://capstone-project-puce-sigma.vercel.app/",
       category: "Full-Stack Project"
     },
     {
