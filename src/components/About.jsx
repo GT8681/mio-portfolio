@@ -11,7 +11,7 @@ function About() {
       <div className="row row-cols-1 row-cols-md-2 g-5 align-items-center">
         
         {/* COLONNA SINISTRA: Chi Sono */}
-        <div className="col">
+        <div className="col" data-aos="fade-right">
           <h2 className="display-5 fw-bold text-primary mb-4"> Chi Sono </h2>
           <p className="lead text-secondary">
             Sono un **Full-Stack Web Developer** con una forte propensione alla risoluzione dei problemi e alla creazione di applicazioni web dinamiche e scalabili.
@@ -25,7 +25,7 @@ function About() {
         </div>
 
         {/* COLONNA DESTRA: Tech Stack (Skills) */}
-        <div className="col">
+        <div className="col" data-aos="fade-left">
           <div className="p-4 bg-dark bg-gradient rounded-4 border border-secondary shadow-sm">
             <h3 className="h4 fw-bold text-light mb-4">Il mio Tech Stack</h3>
 

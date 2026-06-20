@@ -60,11 +60,11 @@ function Contact() {
         
         <div className="text-center mb-5">
           <span className="text-primary text-uppercase fw-bold tracking-widest small d-block mb-2">Contatti</span>
-          <h2 className="display-4 fw-bold text-light">&lt; Parliamo? /&gt;</h2>
+          <h2 className="display-4 fw-bold text-light">SCRIVIMI</h2>
           <div className="bg-primary rounded-pill mx-auto mt-2" style={{ width: '60px', height: '4px' }}></div>
         </div>
 
-        <div className="row justify-content-center">
+        <div className="row justify-content-center" data-aos="fade-up">
           <div className="col-12 col-md-8 col-lg-6">
             <div className="p-4 p-sm-5 rounded-4 border border-secondary border-opacity-25 shadow-lg"
                  style={{ background: 'linear-gradient(145deg, #161b22 0%, #0f141c 100%)' }}>

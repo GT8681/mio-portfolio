@@ -37,7 +37,8 @@ function Projects() {
         </div>
 
         {/* Lista dei Progetti a Righe Alterne */}
-        <div className="d-flex flex-column gap-5 mt-5">
+        <div className="d-flex flex-column gap-4 mt-5"
+             data-aos="fade-up">
           {myProjects.map((project, index) => {
             // Controlla se la riga è pari o dispari per invertire l'ordine delle colonne su desktop
             const isEven = index % 2 === 0;
