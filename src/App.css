@@ -60,4 +60,12 @@ body {
 .tracking-widest {
   letter-spacing: 0.2em;
 }
+.project-image {
+  border: 2px solid #fff;
+  transition: transform 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+}
 

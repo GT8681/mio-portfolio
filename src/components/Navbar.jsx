@@ -42,7 +42,7 @@ function Navbar() {
           {/* Bottone Call to Action opzionale (es. CV) */}
           <div className="d-flex justify-content-center ms-lg-3 mt-3 mt-lg-0">
             <a 
-              href="/Gianni_Toscano_CV.pdf" 
+              href="cvPersonalizzoAgg.pdf" 
               className="btn btn-outline-primary btn-sm" 
               target="_blank" 
               rel="noopener noreferrer"
