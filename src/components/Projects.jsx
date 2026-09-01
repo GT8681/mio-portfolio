@@ -13,7 +13,7 @@ function Projects() {
       githubLink: "https://github.com/GT8681/capstone-Project",
       liveLink: "https://capstone-project-puce-sigma.vercel.app/",
       category: "Full-Stack Project",
-      image: '../../public/imgscout.jpg'
+      image: '../src/assets/imgscout.jpg'
     },
     {
       id: 2,
@@ -24,7 +24,7 @@ function Projects() {
       githubLink: "https://github.com/GT8681/Tournament-Hub",
       liveLink: "https://tournament-hub-ten.vercel.app",
       category: "Logic & Frontend",
-      image: '../../public/imgtorneo.jpg'
+      image: '../src/assets/imgtorneo.jpg'
     }
   ];
 
