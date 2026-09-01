@@ -1,4 +1,6 @@
 import React from 'react';
+import imgscout from '../assets/imgscout.jpg';
+import imgtorneo from '../assets/imgtorneo.jpg';
 
 
 function Projects() {
@@ -13,7 +15,7 @@ function Projects() {
       githubLink: "https://github.com/GT8681/capstone-Project",
       liveLink: "https://capstone-project-puce-sigma.vercel.app/",
       category: "Full-Stack Project",
-      image: '../src/assets/imgscout.jpg'
+      image: imgscout
     },
     {
       id: 2,
@@ -24,7 +26,7 @@ function Projects() {
       githubLink: "https://github.com/GT8681/Tournament-Hub",
       liveLink: "https://tournament-hub-ten.vercel.app",
       category: "Logic & Frontend",
-      image: '../src/assets/imgtorneo.jpg'
+      image: imgtorneo 
     }
   ];
 
