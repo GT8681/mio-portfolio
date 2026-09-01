@@ -2,8 +2,8 @@ import React from 'react';
 
 function About() {
   // Array delle competenze per ciclare facilmente nel codice
-  const frontendSkills = ["HTML5", "CSS3", "JavaScript (ES6)", "React", "Bootstrap", "Tailwind CSS"];
-  const backendSkills = ["Node.js", "Express", "RESTful APIs", "MongoDB / PostgreSQL", "Mongoose"];
+  const frontendSkills = ["HTML5", "CSS3", "JavaScript (ES6)", "React", "Bootstrap"];
+  const backendSkills = ["Node.js", "Express", "RESTful APIs", "MongoDB", "Mongoose"];
   const toolsSkills = ["Git & GitHub", "Postman", "NPM", "Cloudinary", "Render / Vercel"];
 
   return (

@@ -22,7 +22,7 @@ function Projects() {
       description: "Applicazione web focalizzata sulla logica algoritmica complessa. Dispone di una funzione automatizzata per generare calendari di tornei sportivi basati sul girone all'italiana, aggiornando dinamicamente la classifica generale, i punti e le statistiche dei team a ogni inserimento dei risultati.",
       tech: ["React", "JavaScript (ES6)", "Node.js", "Bootstrap", "CSS3"],
       githubLink: "https://github.com/GT8681/Tournament-Hub",
-      liveLink: "",
+      liveLink: "https://tournament-hub-ten.vercel.app",
       category: "Logic & Frontend",
       image: '../../public/imgtorneo.jpg'
     }
