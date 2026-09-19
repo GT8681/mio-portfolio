@@ -15,7 +15,7 @@ src/
 
 Benvenuto nel repository del mio portfolio personale! Questo sito è stato progettato e sviluppato per presentare il mio percorso professionale, il mio tech stack e i progetti realizzati a seguito del completamento del Master Full-Stack Web Developer presso Epicode.
 
-▶️ **[Visualizza la Demo Live](#)** *(Inserisci qui il link generato da Vercel)*
+▶️ **[Visualizza la Demo Live](#)** *(https://mio-portfolio-lovat.vercel.app/)*
 
 ---
 
