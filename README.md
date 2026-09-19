@@ -64,7 +64,7 @@ Per testare, visualizzare o modificare il portfolio direttamente sul tuo compute
 1. **Clona il repository sul tuo PC** (scarica una copia del codice da GitHub):
    ```bash
    git clone [https://github.com/GT8681/mio-portfolio.git]
-              (https://github.com/GT8681/mio-portfolio.git)
+              
 
 
 Entra nella cartella del progetto:
