@@ -58,7 +58,7 @@ function Projects() {
 
                 {/* COLONNA TESTO (Usa l'ordine condizionale `order-lg-1` o `order-lg-2`) */}
                 <div className={`col-12 col-lg-6 ${isEven ? 'order-lg-1' : 'order-lg-2'}`}>
-                  <span className="text-primary font-monospace small fw-bold uppercase tracking-wider mb-2 d-block">
+                  <span className="text-primary font-monospace small fw-bold text-uppercase tracking-wider mb-2 d-block">
                     {project.category}
                   </span>
                   <h3 className="h2 fw-bold text-light mb-1">{project.title}</h3>
