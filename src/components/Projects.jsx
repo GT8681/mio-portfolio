@@ -93,6 +93,8 @@ function Projects() {
                     </a>
                     <a
                       href={project.liveLink}
+                      target='_blank'
+                      rel="noopener noreferrer"
                       className="btn btn-primary px-4 py-2 fw-bold btn-sm shadow-sm"
                     >
                       Demo Live 🚀
