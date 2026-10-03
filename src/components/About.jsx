@@ -51,7 +51,7 @@ function About() {
 
           {/* COLONNA DESTRA: Tech Stack (Skills con Icone) */}
           <div className="col" data-aos="fade-left">
-            <div className="p-4 bg-dark bg-gradient rounded-4 border border-secondary border-opacity-25 shadow-lg"
+            <div className="p-4  rounded-4 border border-secondary border-opacity-25 shadow-lg"
                  style={{ background: 'linear-gradient(145deg, #161b22 0%, #0f141c 100%)' }}>
               <h3 className="h4 fw-bold text-light mb-4">Il mio Tech Stack</h3>
 
@@ -60,7 +60,7 @@ function About() {
                 <h6 className="text-primary text-uppercase fw-bold mb-2" style={{ fontSize: '0.8rem', trackingWidest: '0.1rem' }}>Frontend</h6>
                 <div className="d-flex flex-wrap gap-2">
                   {frontendSkills.map((skill, index) => (
-                    <span key={index} className="badge bg-secondary bg-opacity-10 text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center shadow-sm">
+                    <span key={index} className="badge  text-light border border-secondary border-opacity-50 px-3 py-2 d-flex align-items-center shadow-sm">
                       {skill.icon}
                       {skill.name}
                     </span>
@@ -73,7 +73,7 @@ function About() {
                 <h6 className="text-success text-uppercase fw-bold mb-2" style={{ fontSize: '0.8rem', trackingWidest: '0.1rem' }}>Backend</h6>
                 <div className="d-flex flex-wrap gap-2">
                   {backendSkills.map((skill, index) => (
-                    <span key={index} className="badge bg-success bg-opacity-10 text-success border border-success border-opacity-40 px-3 py-2 d-flex align-items-center shadow-sm">
+                    <span key={index} className="badge text-success border border-success border-opacity-40 px-3 py-2 d-flex align-items-center shadow-sm">
                       {skill.icon}
                       {skill.name}
                     </span>
@@ -86,7 +86,7 @@ function About() {
                 <h6 className="text-warning text-uppercase fw-bold mb-2" style={{ fontSize: '0.8rem', trackingWidest: '0.1rem' }}>Strumenti & Servizi</h6>
                 <div className="d-flex flex-wrap gap-2">
                   {toolsSkills.map((skill, index) => (
-                    <span key={index} className="badge bg-warning bg-opacity-10 text-warning border border-warning border-opacity-40 px-3 py-2 d-flex align-items-center shadow-sm">
+                    <span key={index} className="badge  text-warning border border-warning border-opacity-40 px-3 py-2 d-flex align-items-center shadow-sm">
                       {skill.icon}
                       {skill.name}
                     </span>

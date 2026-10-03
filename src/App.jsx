@@ -20,7 +20,7 @@ function App() {
 
   },[]);
   return (
-    <div className="bg-dark text-light font-monospace min-vh-100 d-flex flex-column justify-content-between">
+    <div className=" text-light font-monospace min-vh-100 d-flex flex-column justify-content-between">
       {/* 1. Barra di navigazione fissa in alto */}
       <Navbar />
 

@@ -1,71 +1,109 @@
-html {
-  scroll-behavior: smooth;
-}
+/* ==========================================
+   APP.CSS - PERSONALIZZAZIONI DEL PORTFOLIO
+   ========================================== */
+
 /* 1. Comportamento Globale */
 html {
   scroll-behavior: smooth; /* Rende lo scroll fluido quando clicchi sulla navbar */
-  scroll-padding-top: 70px; /* Evita che la navbar fissa copra i titoli delle sezioni quando ci navighi */
-}
-
-body {
-  background-color: #121212; /* Sfondo scuro profondo coerente */
-  overflow-x: hidden; /* Evita fastidiosi scroll orizzontali accidentali su mobile */
+  scroll-padding-top: 70px; /* Evita che la navbar fissa copra i titoli delle sezioni */
 }
 
 /* 2. Personalizzazione delle Card dei Progetti */
 .card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: var(--bg-card) !important;
+  color: var(--text-primary) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
 
-/* Effetto sollevamento quando passi il mouse sopra una card */
+/* Effetto sollevamento ed hover dinamico */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(13, 110, 253, 0.15) !important; /* Bagliore blu primario leggero */
-  border-color: #0d6efd !important; /* Il bordo diventa blu Bootstrap */
+  box-shadow: 0 10px 20px var(--card-hover-shadow) !important;
+  border-color: var(--accent-color) !important;
 }
 
-/* 3. Link del Footer e della Navbar */
+/* 3. Immagini dei Progetti */
+.project-image {
+  border: 2px solid var(--border-color);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-image:hover {
+  transform: scale(1.05);
+  border-color: var(--accent-color);
+}
+
+/* 4. Link del Footer e della Navbar */
 .link-transition {
   transition: color 0.2s ease-in-out;
 }
 
 .text-primary-hover:hover {
-  color: #0d6efd !important; /* I link social diventano blu all'hover */
+  color: var(--accent-color) !important;
   text-decoration: none;
 }
 
-/* 4. Input Form di Contatto Custom */
+/* 5. Input Form di Contatto Custom */
 .form-control {
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border: 1px solid var(--border-color) !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
 }
 
-/* Elimina il fastidioso bagliore di default dei browser e usa uno stile moderno */
+/* Focus moderno che rispetta il tema */
 .form-control:focus {
-  background-color: rgba(255, 255, 255, 0.05) !important;
-  color: #fff !important;
-  border-color: #0d6efd;
+  background-color: var(--input-bg) !important;
+  color: var(--input-text) !important;
+  border-color: var(--accent-color) !important;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
-/* Cambia il colore del testo dei placeholder per renderli più leggibili */
+/* Cambia il colore del testo dei placeholder per renderli leggibili in entrambi i temi */
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--placeholder-color) !important;
 }
 
-/* 5. Utility per spaziatura testo */
+/* 6. Utility per spaziatura testo */
 .tracking-wider {
   letter-spacing: 0.1em;
 }
+
 .tracking-widest {
   letter-spacing: 0.2em;
 }
-.project-image {
-  border: 2px solid #fff;
-  transition: transform 0.3s ease;
+
+/* Sfondo dinamico per i box dei progetti */
+.project-card-box {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+/* Footer Dinamico */
+.footer-section {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.project-image:hover {
-  transform: scale(1.05);
+.footer-title {
+  color: var(--text-main);
 }
 
+/* Input Newsletter Adattivo */
+.footer-input {
+  background-color: var(--bg-main) !important;
+  color: var(--text-main) !important;
+  border-color: var(--border-color) !important;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.footer-input::placeholder {
+  color: var(--text-muted, #6c757d);
+}
+
+.footer-input:focus {
+  border-color: var(--accent-color) !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+}

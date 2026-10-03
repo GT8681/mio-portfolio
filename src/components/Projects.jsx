@@ -2,9 +2,7 @@ import React from 'react';
 import imgscout from '../assets/imgscout.jpg';
 import imgtorneo from '../assets/imgtorneo.jpg';
 
-
 function Projects() {
-  // I tuoi progetti reali con descrizioni dettagliate e tech stack preciso
   const myProjects = [
     {
       id: 1,
@@ -36,32 +34,33 @@ function Projects() {
 
         {/* Intestazione Sezione */}
         <div className="text-center mb-5">
-          <span className="text-primary text-uppercase fw-bold tracking-widest small d-block mb-2">Portfolio</span>
-          <h2 className="display-4 fw-bold text-light">PROGETTI REALIZZATI</h2>
-          <div className="bg-primary rounded-pill mx-auto mt-2" style={{ width: '60px', height: '4px' }}></div>
+          <span className="text-primary text-uppercase fw-bold tracking-widest small d-block mb-2">
+            Portfolio
+          </span>
+          {/* Rimosso text-light per permettere il cambio colore dinamico */}
+          <h2 className="display-4 fw-bold">PROGETTI REALIZZATI</h2>
+          <div className="rounded-pill mx-auto mt-2" style={{ width: '60px', height: '4px', backgroundColor: 'var(--accent-color)' }}></div>
         </div>
 
         {/* Lista dei Progetti a Righe Alterne */}
-        <div className="d-flex flex-column gap-4 mt-5"
-          data-aos="fade-up">
+        <div className="d-flex flex-column gap-4 mt-5" data-aos="fade-up">
           {myProjects.map((project, index) => {
-            // Controlla se la riga è pari o dispari per invertire l'ordine delle colonne su desktop
             const isEven = index % 2 === 0;
 
             return (
               <div
                 key={project.id}
-                className="row align-items-center g-4 g-lg-5 p-4 p-lg-5 bg-dark bg-gradient rounded-4 border border-secondary border-opacity-25 shadow-lg"
-                style={{ background: 'linear-gradient(145deg, #161b22 0%, #0f141c 100%)' }}
+                /* Rimosso il background fisso hardcodato: ora la classe .card o il border leggono le variabili CSS */
+                className="row align-items-center g-4 g-lg-5 p-4 p-lg-5 rounded-4 border border-secondary border-opacity-25 shadow-lg project-card-box"
               >
 
-
-                {/* COLONNA TESTO (Usa l'ordine condizionale `order-lg-1` o `order-lg-2`) */}
+                {/* COLONNA TESTO */}
                 <div className={`col-12 col-lg-6 ${isEven ? 'order-lg-1' : 'order-lg-2'}`}>
                   <span className="text-primary font-monospace small fw-bold text-uppercase tracking-wider mb-2 d-block">
                     {project.category}
                   </span>
-                  <h3 className="h2 fw-bold text-light mb-1">{project.title}</h3>
+                  {/* Rimosso text-light */}
+                  <h3 className="h2 fw-bold mb-1">{project.title}</h3>
                   <h4 className="h6 text-secondary fw-normal mb-4 italic">{project.subtitle}</h4>
 
                   <p className="text-secondary mb-4" style={{ lineHeight: '1.7', fontSize: '1rem' }}>
@@ -73,8 +72,8 @@ function Projects() {
                     {project.tech.map((techName, i) => (
                       <span
                         key={i}
-                        className="badge bg-secondary bg-opacity-10 text-primary border border-primary border-opacity-20 px-3 py-2 font-monospace"
-                        style={{ fontSize: '0.8rem' }}
+                        className="badge text-primary border border-primary border-opacity-25 px-3 py-2 font-monospace"
+                        style={{ fontSize: '0.8rem', backgroundColor: 'rgba(13, 110, 253, 0.08)' }}
                       >
                         {techName}
                       </span>
@@ -87,7 +86,8 @@ function Projects() {
                       href={project.githubLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn btn-outline-light px-4 py-2 fw-semibold btn-sm link-transition"
+                      /* Usato btn-outline-secondary per adattarsi sia in Light che in Dark Mode */
+                      className="btn btn-outline-secondary px-4 py-2 fw-semibold btn-sm link-transition"
                     >
                       Repository GitHub
                     </a>
@@ -106,10 +106,9 @@ function Projects() {
                 <div className={`col-12 col-lg-6 ${isEven ? 'order-lg-2' : 'order-lg-1'}`}>
                   <div
                     className="position-relative overflow-hidden rounded-3 shadow border border-secondary border-opacity-50 card-hover-effect"
-                    style={{ aspectRatio: '16/10', background: '#1c2128' }}
+                    style={{ aspectRatio: '16/10', backgroundColor: 'var(--bg-main)' }}
                   >
                     {project.image ? (
-                      // Se l'immagine è presente, la mostra con un bell'effetto di adattamento
                       <img
                         src={project.image}
                         alt={project.title}
@@ -119,7 +118,6 @@ function Projects() {
                         onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
                       />
                     ) : (
-                      // Fallback se non c'è ancora un'immagine (es. per il secondo progetto)
                       <div className="w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center p-4">
                         <div className="display-4 mb-2 opacity-50">⚽</div>
                         <h5 className="text-secondary font-monospace small mb-0">&lt; Preview Img: {project.title} /&gt;</h5>
@@ -128,7 +126,10 @@ function Projects() {
                     )}
 
                     {/* Overlay scuro leggero all'hover */}
-                    <div className="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-0 hover-overlay transition" style={{ transition: 'all 0.3s', pointerEvents: 'none' }}></div>
+                    <div 
+                      className="position-absolute top-0 start-0 w-100 h-100 bg-primary opacity-0 hover-overlay transition" 
+                      style={{ transition: 'all 0.3s', pointerEvents: 'none' }}
+                    ></div>
                   </div>
                 </div>
 

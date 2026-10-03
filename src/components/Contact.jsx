@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 function Contact() {
-  // Sostituisci questo codice con l'ID che ti ha dato Formspree!
   const FORMSPREE_ID = "xnjyrlnb"; 
 
   const [formData, setFormData] = useState({
@@ -22,7 +21,6 @@ function Contact() {
     setFormData({ ...formData, [name]: value });
   };
 
-  // LA FUNZIONE REALE CHE INVIA L'EMAIL
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus({ ...status, submitting: true });
@@ -38,18 +36,14 @@ function Contact() {
       });
 
       if (response.ok) {
-        // Inviato con successo!
         setStatus({ submitted: true, submitting: false, error: false });
-        setFormData({ name: '', email: '', subject: '', message: '' }); // Svuota il form
+        setFormData({ name: '', email: '', subject: '', message: '' });
         
-        // Nascondi il banner di successo dopo 5 secondi
         setTimeout(() => setStatus(prev => ({ ...prev, submitted: false })), 5000);
       } else {
-        // Risposta del server non OK
         setStatus({ submitted: false, submitting: false, error: true });
       }
     } catch (err) {
-      // Errore di rete
       setStatus({ submitted: false, submitting: false, error: true });
     }
   };
@@ -60,14 +54,15 @@ function Contact() {
         
         <div className="text-center mb-5">
           <span className="text-primary text-uppercase fw-bold tracking-widest small d-block mb-2">Contatti</span>
-          <h2 className="display-4 fw-bold text-light">SCRIVIMI</h2>
+          {/* Rimosso text-light per consentire il colore dinamico del tema */}
+          <h2 className="display-4 fw-bold">SCRIVIMI</h2>
           <div className="bg-primary rounded-pill mx-auto mt-2" style={{ width: '60px', height: '4px' }}></div>
         </div>
 
         <div className="row justify-content-center" data-aos="fade-up">
           <div className="col-12 col-md-8 col-lg-6">
-            <div className="p-4 p-sm-5 rounded-4 border border-secondary border-opacity-25 shadow-lg"
-                 style={{ background: 'linear-gradient(145deg, #161b22 0%, #0f141c 100%)' }}>
+            {/* Sostituito lo stile inline hardcodato con la classe .contact-card-box */}
+            <div className="p-4 p-sm-5 rounded-4 border border-secondary border-opacity-25 shadow-lg contact-card-box">
               
               {/* Banner di Successo */}
               {status.submitted && (
@@ -85,10 +80,10 @@ function Contact() {
 
               <form onSubmit={handleSubmit}>
                 <div className="mb-3">
-                  <label htmlFor="name" className="form-label text-light small fw-bold text-uppercase opacity-70">Nome</label>
+                  <label htmlFor="name" className="form-label contact-label small fw-bold text-uppercase">Nome</label>
                   <input
                     type="text"
-                    className="form-control bg-dark bg-opacity-50 border-secondary border-opacity-50 text-light p-3"
+                    className="form-control contact-input p-3"
                     id="name"
                     name="name"
                     value={formData.name}
@@ -100,10 +95,10 @@ function Contact() {
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="email" className="form-label text-light small fw-bold text-uppercase opacity-70">Email</label>
+                  <label htmlFor="email" className="form-label contact-label small fw-bold text-uppercase">Email</label>
                   <input
                     type="email"
-                    className="form-control bg-dark bg-opacity-50 border-secondary border-opacity-50 text-light p-3"
+                    className="form-control contact-input p-3"
                     id="email"
                     name="email"
                     value={formData.email}
@@ -115,10 +110,10 @@ function Contact() {
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="subject" className="form-label text-light small fw-bold text-uppercase opacity-70">Oggetto</label>
+                  <label htmlFor="subject" className="form-label contact-label small fw-bold text-uppercase">Oggetto</label>
                   <input
                     type="text"
-                    className="form-control bg-dark bg-opacity-50 border-secondary border-opacity-50 text-light p-3"
+                    className="form-control contact-input p-3"
                     id="subject"
                     name="subject"
                     value={formData.subject}
@@ -130,9 +125,9 @@ function Contact() {
                 </div>
 
                 <div className="mb-4">
-                  <label htmlFor="message" className="form-label text-light small fw-bold text-uppercase opacity-70">Messaggio</label>
+                  <label htmlFor="message" className="form-label contact-label small fw-bold text-uppercase">Messaggio</label>
                   <textarea
-                    className="form-control bg-dark bg-opacity-50 border-secondary border-opacity-50 text-light p-3"
+                    className="form-control contact-input p-3"
                     id="message"
                     name="message"
                     rows="5"
