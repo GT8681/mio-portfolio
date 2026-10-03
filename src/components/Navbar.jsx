@@ -9,6 +9,7 @@ function Navbar() {
         {/* Logo / Brand */}
         <a className="navbar-brand fw-bold text-primary" href="#hero">
           {/* Il tuo logo/nome qui */}
+          Toscano Gianni
         </a>
 
         {/* Hamburger Button per Mobile */}
@@ -29,10 +30,10 @@ function Navbar() {
           {/* Aggiunta la classe d-flex align-items-center per allineare bene il toggle */}
           <ul className="navbar-nav ms-auto text-center align-items-center gap-2 my-2 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#about">Chi Sono</a>
+              <a className="nav-link" href="#hero">Chi Sono</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#skills">Competenze</a>
+              <a className="nav-link" href="#about">Competenze</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#projects">Progetti</a>

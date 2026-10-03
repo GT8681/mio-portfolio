@@ -8,6 +8,7 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import 'aos/dist/aos.css'; // Importa gli stili di AOS
+import CustomCursor from './components/CustomCursor';
 
 function App() {
   useEffect(() => {
@@ -21,6 +22,7 @@ function App() {
   },[]);
   return (
     <div className=" text-light font-monospace min-vh-100 d-flex flex-column justify-content-between">
+      <CustomCursor />
       {/* 1. Barra di navigazione fissa in alto */}
       <Navbar />
 

@@ -1,15 +1,16 @@
 import React from 'react';
+import Typewriter from 'typewriter-effect';
 
 function Hero() {
   return (
-    <section 
-      id="hero" 
+    <section
+      id="hero"
       /* Usiamo hero-section per gestire lo sfondo dinamico via CSS */
       className="hero-section d-flex align-items-center justify-content-center min-vh-100 position-relative overflow-hidden"
     >
       {/* Sfondo decorativo tech sfocato */}
-      <div 
-        className="position-absolute top-0 start-0 w-100 h-100 pointer-events-none" 
+      <div
+        className="position-absolute top-0 start-0 w-100 h-100 pointer-events-none"
         style={{
           backgroundImage: 'linear-gradient(rgba(13, 110, 253, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(13, 110, 253, 0.05) 1px, transparent 1px)',
           backgroundSize: '30px 30px'
@@ -18,23 +19,38 @@ function Hero() {
 
       <div className="container px-4 z-1">
         <div className="row align-items-center g-5">
-          
+
           {/* COLONNA SINISTRA: Testi & Pulsanti */}
           <div className="col-12 col-lg-6 text-center text-lg-start">
             <span className="badge bg-primary bg-opacity-10 text-primary border border-primary border-opacity-25 px-3 py-2 rounded-pill text-uppercase fw-bold mb-3 tracking-wider" style={{ fontSize: '0.8rem' }}>
               ⚡ Open to Work
             </span>
-            
+
             <h1 className="display-1 fw-black tracking-tight mb-3" style={{ fontSize: 'calc(2rem + 2.5vw)' }}>
               Ciao, sono <br className="d-none d-lg-block" />
-              <span className="text-transparent bg-clip-text bg-gradient text-primary" style={{ backgroundImage: 'linear-gradient(45deg, #0d6efd, #0dcaf0)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>
+              <span className="hero-gradient-name fw-bold">
                 Gianni Toscano
               </span>
             </h1>
-            
             <h2 className="h4 text-secondary fw-light mb-4" style={{ lineHeight: '1.6' }}>
-              Un <strong className="fw-semibold hero-highlight-text">Full-Stack Web Developer</strong> specializzato nella costruzione di applicazioni robuste, logiche scalabili e interfacce utente fluide.
+              Sono un{' '}
+              <span className="fw-semibold text-primary d-inline-block">
+                <Typewriter
+                  options={{
+                    strings: [
+                      'Full-Stack Web Developer',
+                      'Specialista React & Node.js',
+                      'Creatore di Web App Dinamiche'
+                    ],
+                    autoStart: true,
+                    loop: true,
+                    delay: 50,
+                    deleteSpeed: 30,
+                  }}
+                />
+              </span>
             </h2>
+
 
             {/* Pulsanti Call To Action */}
             <div className="d-grid gap-3 d-sm-flex justify-content-center justify-content-lg-start mb-4">
@@ -49,18 +65,18 @@ function Hero() {
 
             {/* Social Link */}
             <div className="d-flex justify-content-center justify-content-lg-start gap-4 pt-2">
-              <a 
-                href="https://github.com/GT8681" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://github.com/GT8681"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-secondary text-primary-hover text-decoration-none d-flex align-items-center gap-2 small fw-bold text-uppercase tracking-wider link-transition"
               >
                 <span>💻</span> GitHub
               </a>
-              <a 
-                href="https://www.linkedin.com/in/gianni-toscano/" 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href="https://www.linkedin.com/in/gianni-toscano/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-secondary text-primary-hover text-decoration-none d-flex align-items-center gap-2 small fw-bold text-uppercase tracking-wider link-transition"
               >
                 <span>💼</span> LinkedIn
@@ -80,7 +96,7 @@ function Hero() {
                 </div>
                 <small className="text-secondary mx-auto font-monospace" style={{ fontSize: '0.8rem' }}>developer.js</small>
               </div>
-              
+
               {/* Contenuto del codice */}
               <div className="card-body p-4 font-monospace" style={{ fontSize: '0.9rem', lineHeight: '1.5' }}>
                 <p className="mb-1"><span className="text-danger">const</span> <span className="text-primary">developer</span> = &#123;</p>
@@ -93,18 +109,23 @@ function Hero() {
                 <p className="mb-1" style={{ paddingLeft: '20px' }}><span className="text-info">]</span>,</p>
                 <p className="mb-1" style={{ paddingLeft: '20px' }}><span className="code-key">passion:</span> <span className="text-warning">'Building impactful dynamic apps'</span></p>
                 <p className="mb-0">&#125;;</p>
+                {/* In fondo all'editor di codice in Hero.jsx */}
+                <p className="mb-0">
+                   <span className="blinking-cursor">|</span>
+                </p>
               </div>
             </div>
           </div>
-
         </div>
       </div>
+
 
       {/* Indicatore di Scroll */}
       <div className="position-absolute bottom-0 start-50 translate-middle-x mb-3 d-none d-lg-block text-secondary opacity-50">
         <div className="text-center" style={{ fontSize: '1.2rem', animation: 'bounce 2s infinite' }}>↓</div>
       </div>
     </section>
+
   );
 }
 

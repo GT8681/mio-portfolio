@@ -8,6 +8,12 @@ html {
   scroll-padding-top: 70px; /* Evita che la navbar fissa copra i titoli delle sezioni */
 }
 
+/* Nasconde la freccia nativa su tutto il sito */
+html, body, a, button, input, textarea, select {
+  cursor: none !important;
+}
+
+
 /* 2. Personalizzazione delle Card dei Progetti */
 .card {
   background-color: var(--bg-card) !important;
@@ -107,3 +113,111 @@ html {
   border-color: var(--accent-color) !important;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
 }
+/* Nome sfumato dinamico ed elegante */
+.hero-gradient-name {
+  background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+/* Animazione respiro per il nome */
+@keyframes nameGlow {
+  0% {
+    filter: drop-shadow(0 0 2px rgba(13, 110, 253, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(13, 202, 240, 0.6));
+  }
+  100% {
+    filter: drop-shadow(0 0 2px rgba(13, 110, 253, 0.2));
+  }
+}
+
+.hero-gradient-name {
+  background: linear-gradient(45deg, #0d6efd, #0dcaf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  animation: nameGlow 3s infinite ease-in-out;
+}
+/* Transizione morbida sulle card dei progetti */
+.project-card-box {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-color) !important;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              box-shadow 0.4s ease, 
+              border-color 0.4s ease,
+              background-color 0.3s ease;
+}
+
+.project-card-box:hover {
+  transform: translateY(-8px);
+  border-color: rgba(13, 110, 253, 0.5) !important;
+  box-shadow: 0 15px 30px -10px rgba(13, 110, 253, 0.25) !important;
+}
+@keyframes pulseBtn {
+  0% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(13, 110, 253, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0);
+  }
+}
+
+.btn-primary {
+  animation: pulseBtn 2.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.blinking-cursor {
+  color: #0dcaf0;
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+/* 1. Punto centrale del mouse (Sostituisce la punta della freccia) */
+.cursor-dot {
+  position: fixed;
+  width: 6px;
+  height: 6px;
+  background-color: #0dcaf0;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+
+/* 2. Cerchio con alone luminoso che lo segue */
+.custom-cursor-glow {
+  position: fixed;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(13, 202, 240, 0.7);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.12s ease-out, width 0.2s ease, height 0.2s ease, background-color 0.2s ease;
+  z-index: 9999;
+  box-shadow: 0 0 10px rgba(13, 202, 240, 0.4);
+}
+
+/* 3. Effetto quando passi sopra un link o un bottone */
+.custom-cursor-glow.hovered {
+  width: 44px;
+  height: 44px;
+  background-color: rgba(13, 202, 240, 0.15);
+  border-color: #0dcaf0;
+  box-shadow: 0 0 16px rgba(13, 202, 240, 0.8);
+}
+
+
+
+
